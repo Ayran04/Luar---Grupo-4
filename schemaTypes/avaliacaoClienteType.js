@@ -19,7 +19,7 @@ export const avaliacaoClienteType = defineType({
         }),
         defineField({
             name: "Avaliacao",
-            type: 'Number',
+            type: 'number',
         }),
     ]
 });
