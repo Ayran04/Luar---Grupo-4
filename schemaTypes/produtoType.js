@@ -21,11 +21,11 @@ export const produtoType = defineType({
                 fixedDecimalScale: true,
                 allowNegative: false
             },
+            validation: Rule => Rule.required().min(0.01)
         }),
         defineField({
-            name: 'cores',
+            name: 'Cores',
             type: 'array',
-            title: 'Cores',
             of: [
                 {
                     name: 'cor',
@@ -35,9 +35,8 @@ export const produtoType = defineType({
             ],
         }),
         defineField({
-            name: 'images',
+            name: 'Images',
             type: 'array',
-            title: 'Images',
             of: [
                 {
                     name: 'image',
@@ -49,10 +48,12 @@ export const produtoType = defineType({
         defineField({
             name: 'Avaliacao',
             type: 'number',
+            validation: Rule => Rule.required().min(1).max(5)
         }),
         defineField({
             name: 'Quantidade',
             type: 'number',
+            validation: Rule => Rule.required().min(0)
         }),
     ],
 });

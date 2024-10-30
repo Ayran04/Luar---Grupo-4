@@ -20,6 +20,7 @@ export const avaliacaoClienteType = defineType({
         defineField({
             name: "Avaliacao",
             type: 'number',
+            validation: Rule => Rule.required().min(1).max(5)
         }),
     ]
 });
