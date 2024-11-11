@@ -47,10 +47,6 @@ export const produtoType = defineType({
             ],
         }),
         defineField({
-            name: 'Avaliacao',
-            type: 'number',
-        }),
-        defineField({
             name: 'Quantidade',
             type: 'number',
         }),
